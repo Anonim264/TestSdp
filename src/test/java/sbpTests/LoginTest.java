@@ -20,14 +20,14 @@ public class LoginTest extends BaseSteps{
     @Test
     void blockinCard() {
         Locators.selectCard.shouldBe(visible).click();
-        Locators.checkCardOn.shouldHave(text("Действует"));
+        Locators.panelBlockCard.shouldHave(text("Заблокировать"));
         Locators.panelBlockCard.shouldBe(visible).click();
         Locators.blockCard.shouldBe(visible).click();
         switchTo().frame($x("//iframe[@id='confirmation-frame']"));
         Locators.confirmCard.shouldBe(visible).click();
 
-        Locators.checkCardOff.shouldBe(visible);
-        Locators.checkCardOff.shouldHave(text("Заблокирована"));
+        Locators.panelUnblockCard.shouldBe(visible);
+        Locators.panelUnblockCard.shouldHave(text("Разблокировать"));
         Locators.panelUnblockCard.shouldBe(visible).click();
         switchTo().frame($x("//iframe"));
         Locators.confirmCard.shouldBe(visible).click();

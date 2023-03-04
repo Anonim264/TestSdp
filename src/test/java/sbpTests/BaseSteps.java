@@ -17,7 +17,7 @@ public class BaseSteps {
     @BeforeAll
     static void beforeConfig() {
         SelenideLogger.addListener("listenerAllure",new AllureSelenide().screenshots(true).savePageSource(false));
-        Configuration.timeout = 3000; // Умное ожидание появление элемента на странице
+        Configuration.timeout = 3000;
         Configuration.browserSize = "1920x1080";
     }
     @BeforeEach
